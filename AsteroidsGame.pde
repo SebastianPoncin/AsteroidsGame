@@ -48,7 +48,6 @@ public void draw() {
       laserz.add(new Laser(shippy));
       shippy.accelerate(-2);
       t2 = t;
-      println(laserz.size());
     }
     for(int i = 0; i < stars.length; i++) {
       stars[i].show();
