@@ -2,9 +2,9 @@ class Spaceship extends Floater
 {   
     //your code here
     public Spaceship() {
-      corners = 4;  //the number of corners, a triangular floater has 3   
-      xCorners = new int[] {-8, 16, -8, -2};   
-      yCorners = new int[] {-8, 0, 8, 0};   
+      corners = 4; //the number of corners, a triangular floater has 3   
+      xCorners = new float[] {-8, 16, -8, -2};   
+      yCorners = new float[] {-8, 0, 8, 0};   
       myColor = 255;   
       myCenterX = 360;
       myCenterY = 360; //holds center coordinates   
@@ -20,4 +20,6 @@ class Spaceship extends Floater
       myYspeed = 0;
       myPointDirection = (int)(Math.random()*360);
     }
+    
+    
 }
