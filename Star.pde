@@ -12,8 +12,4 @@ class Star {
     noStroke();
     ellipse(x, y, (float)c/64.0, (float)c/64.0);;
   }
-  
-  public void move() {
-      
-  }
 }
