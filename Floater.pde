@@ -1,8 +1,7 @@
-class Floater //Do NOT modify the Floater class! Make changes in the Spaceship class 
-{   
-  protected int corners;  //the number of corners, a triangular floater has 3   
-  protected int[] xCorners;   
-  protected int[] yCorners;   
+class Floater { //Do NOT modify the Floater class! Make changes in the Spaceship class   
+  protected int corners; //the number of corners, a triangular floater has 3   
+  protected float[] xCorners;   
+  protected float[] yCorners;   
   protected int myColor;   
   protected double myCenterX, myCenterY; //holds center coordinates   
   protected double myXspeed, myYspeed; //holds the speed of travel in the x and y directions   
@@ -22,7 +21,7 @@ class Floater //Do NOT modify the Floater class! Make changes in the Spaceship c
     //rotates the floater by a given number of degrees    
     myPointDirection+=degreesOfRotation;   
   }   
-  public void move ()   //move the floater in the current direction of travel
+  public void move () //move the floater in the current direction of travel
   {      
     //change the x and y coordinates by myXspeed and myYspeed       
     myCenterX += myXspeed;    
@@ -47,10 +46,10 @@ class Floater //Do NOT modify the Floater class! Make changes in the Spaceship c
       myCenterY = height;    
     }   
   }   
-  public void show ()  //Draws the floater at the current position  
+  public void show () //Draws the floater at the current position  
   {             
-    fill(myColor);   
-    stroke(myColor);    
+    fill(myColor);// UHHH  
+    //stroke(255); UHHH
     
     //translate the (x,y) center of the ship to the correct position
     translate((float)myCenterX, (float)myCenterY);
@@ -73,4 +72,20 @@ class Floater //Do NOT modify the Floater class! Make changes in the Spaceship c
     rotate(-1*dRadians);
     translate(-1*(float)myCenterX, -1*(float)myCenterY);
   }   
+  // ADDED THIS CUZ ITS ANNOYING
+  public float getX() { // JUST WRITE THIS IN THE FLOATER WHAT ARE YOU DOING IDFK MAN IM DUMB
+    return (float)myCenterX;
+  }
+  public float getY() {
+   return (float)myCenterY;
+  }
+  public double getXspeed() {
+    return myXspeed;
+  }
+  public double getYspeed() {
+    return myYspeed;
+  }
+  public double getPointDir() {
+    return myPointDirection;
+  }
 } 
